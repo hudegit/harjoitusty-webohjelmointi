@@ -15,6 +15,28 @@ document.getElementById('csvFile').addEventListener('change', function(e) {
     reader.readAsText(file); //luetaan tiedosto tekstinä
 });
 
+function readFileAndProcess(filename) {
+    fetch(filename)
+        .then(response => response.text())
+        .then(content => {
+            csvData = parseCSV(content);
+            populateDateInputs();
+            showData();
+        })
+        .catch(error => console.error('Virhe tiedoston lukemisessa:', error));
+}
+
+// Nappien kuuntelijat pääovi ja sivuovi napeille
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('paaovi').addEventListener('click', function() {
+        readFileAndProcess('./ovilaskuritmallimateriaali/paaovi.txt');
+    });
+
+    document.getElementById('sivuovi').addEventListener('click', function() {
+        readFileAndProcess('./ovilaskuritmallimateriaali/sivuovi.txt');
+    });
+});
+
 function parseCSV(content) {
     const lines = content.split('\n'); //Jaetaan riveihin
     return lines.map(line => line.split(',')); // Jaetaan rivit pilkulla
