@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="FI">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CSV-tiedoston lukija</title>
+    </head>
+<body>
+    <!-- Tiedoston valitseminen -->
+    <input type="file" id="csvFile" accept=".txt"> 
+    <br><br>
+    <!-- Halutun päivämäärien valitseminen -->
+    <div class="date-container">
+        <label for="startDate">Alkupäivämäärä:</label>
+        <input type="date" id="startDate">
+        
+        <label for="endDate">Loppupäivämäärä:</label>
+        <input type="date" id="endDate">
+    </div>
+    <!-- Näytä tiedot nappi    -->
+    <button onclick="showData()">Näytä tiedot</button>
+    <br><br>
+    <div id="output"></div>
+    <!-- Taulukkon siirtäminen taulukkonohjelmaan nappi -->
+    <button onclick="exportToExcel()">Vie Exceliin WIP</button> Toimii openofficessa mutta ei excelissä oikein
+
+    <script src="./js/functions.js"></script>
+</body>
+</html>

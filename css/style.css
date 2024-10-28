@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+    margin: 10px;
+    /* padding: 5px; */
+    padding-inline: 5px;
+}
+
+/* Luo yhtenäinen container päivämäärävalinnoille */
+.date-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100px; /* Säädä tätä tarpeen mukaan */
+    margin-bottom: 15px;
+}
+
+/* Tyyli label-elementeille */
+.date-container label {
+    margin-bottom: 5px;
+}
+
+/* Tyyli input-elementeille */
+.date-container input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
