@@ -7,3 +7,4 @@ Käyttäjä voi myös tämän jälkeen siirtää tiedot suoraan taulukoksi joka 
 
 Jatkokehitystä ja oikeaan käyttöä varten sivua voisi kehittää niin että tiedostovalitsimen sijaan olisi suorat napit esimerkiksi Pääovikäyttäjämäärät ja Sivuovikäyttäjämäärät ja näitä painamalla hakee tiedot suoraan kävijämäärälaskurilta APIa käyttäen.
 
+Lisätty napit pääovi ja sivuovi. Vaatii web-palvelimen käyttöä esimerkiksi visual studio code live server.
